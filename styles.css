@@ -1,7 +1,15 @@
-.placeholder{
-	background-color: red;
+.nav-wrapper{
+	display:flex;
+	justify-content: space-between;
+	padding: 38px;
 }
 
-.anotherclass{
-	background-color: lightblue;
+.left-side{
+	display flex: ;
+}
+
+.nav-wrapper > .left-side  > div{
+	margin-right: 200px;
+	font-size : 0.9em;
+	text-transform:uppercase;
 }
