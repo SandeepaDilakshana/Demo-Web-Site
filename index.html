@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8"/>
@@ -27,6 +28,7 @@
 			<div class="portfolio-items-wrapper">
 
 				<div class="portfolio-item-wrapper">
+					<div class="portfolio-item-wrapper">
 					<div class = "portfolio-image-background" style="background-image: url(marek-piwnicki-sIaIHalCnsM-unsplash.jpg)"></div>
 
 					<div class="img-text-wrapper">
@@ -39,6 +41,7 @@
 						</div>
 					</div>
 				</div>
+				
 
 				<div class="portfolio-item-wrapper">
 					<div class = "portfolio-image-background" style="background-image: url(k-soma-Q-2EigkW_z0-unsplash.jpg)"></div>
@@ -53,6 +56,7 @@
 						</div>
 					</div>
 				</div>
+				
 
 				<div class="portfolio-item-wrapper">
 					<div class = "portfolio-image-background" style="background-image: url(maria-osta-iJ-P0CWfjfs-unsplash.jpg)"></div>
@@ -67,6 +71,7 @@
 						</div>
 					</div>
 				</div>
+				
 
 				<div class="portfolio-item-wrapper">
 					<div class = "portfolio-image-background" style="background-image: url(yevhenii-aihubov-KbgliMN-oHI-unsplash.jpg)"></div>
@@ -81,11 +86,29 @@
 						</div>
 					</div>
 				</div>
-
+			</div>
+				
+				</div>
 			</div>
 		</div>
 
 	</div>
 </body>
+<script>
+	const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+	portfolioItems.forEach(portfolioItem => {
+		portfolioItem.addEventListner('mouseover',() => {
+			console.log(portfolioItem.childNodes[1].classList);
+			portfolioItem.childNodes[1].classList.add('img-darken');
+		})
+
+		portfolioItems.forEach(portfolioItem => {
+		portfolioItem.addEventListner('mouseover',() => {
+			console.log(portfolioItem.childNodes[1].classList);
+			portfolioItem.childNodes[1].classList.remove('img-darken');
+		})
+	})
+</script>
 
 </html>  
